@@ -41,7 +41,7 @@ require("lazy").setup({
 		"L3MON4D3/LuaSnip",
 		version = "v2.*",
 	},
-    	"tanvirtin/monokai.nvim", -- 安装主题
+    	-- "tanvirtin/monokai.nvim", -- 安装主题
 	{ 
         'nvim-lualine/lualine.nvim', -- lualine
         config = function()
