@@ -1,0 +1,12 @@
+
+simplified_ui true // false(default) ：with arrow font
+
+default_shell "zsh"
+
+theme "tokyo-night-storm"
+
+default_layout "normal"
+
+//layout_dir "./layouts/"
+
+//theme_dir "./themes/"
