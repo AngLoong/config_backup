@@ -1,0 +1,159 @@
+
+anonymous_enable=YES
+## 允许匿名用户和本地用户登陆。
+
+local_enable=YES
+## 匿名用户使用的登陆名为ftp或anonymous，口令为空；匿名用户不能离开匿名用户家目录/var/ftp,且只能下载不能上传。
+
+
+write_enable=YES
+## 本地用户的登录名为本地用户名，口令为此本地用户的口令；
+## 本地用户可以在自己家目录中进行读写操作；
+## 本地用户可以离开自家目录切换至有权限访问的其他目录，并在权限允许的情况下进行上传/下载。
+
+#写在文件/etc/vsftpd.ftpusers中的本地用户禁止登陆
+
+dirmessage_enable=YES 
+## 如果启动选项，第一次进入目录时，若有.message这个档案，则会出现此档案的内容，
+## 通常这个档案会放置欢迎话语，或是对该目录的说明
+## 默认YES
+
+#xferlog_enable=YES
+## 是否启用上传/下载日志记录；
+## 启用，则上传与下载的信息将被完整纪录在xferlog_file 所定义的文件中；
+## 默认YES
+
+#xferlog_file=/var/log/xferlog 	
+## 设置日志文件名和路径
+## 默认值：/var/log/vsftpd.log 	
+
+connect_from_port_20=YES 
+## 指定FTP使用20端口进行数据传输
+## 默认YES
+
+listen=YES
+## 设置vsftpd服务器是否以standalone模式运行
+## 默认YES
+
+########################################
+## 匿名登录设置
+########################################
+
+
+ftp_username=ftp
+#定义匿名登入的使用者名称。默认值为ftp。
+
+anon_root=/var/ftp
+## 使用匿名登入时，所登入的目录。默认值为/var/ftp。
+## 注意ftp目录不能是777的权限属性，即匿名用户的家目录不能有777的权限。
+
+anon_upload_enable=YES
+## 如果设为YES，则允许匿名登入者有上传文件（非目录）的权限.
+## 只有在write_enable=YES时，此项才有效。当然，匿名用户必须要有对上层目录的写入权。默认值为NO。
+
+anon_world_readable_only=YES
+#如果设为YES，则允许匿名登入者下载可阅读的档案（可以下载到本机阅读，不能直接在FTP服务器中打开阅读）。默认值为YES。
+
+anon_mkdir_write_enable=YES
+# 如果设为YES，则允许匿名登入者有新增目录的权限，只有在write_enable=YES时，此项才有效。当然，匿名用户必须要有对上层目录的写入权。
+## 默认值为NO。
+
+anon_other_write_enable=YES
+## 如果设为YES，则允许匿名登入者更多于上传或者建立目录之外的权限，譬如删除或者重命名。
+## （如果anon_upload_enable=NO，则匿名用户不能上传文件，但可以删除或者重命名已经存在的文件；
+## 如果anon_mkdir_write_enable=NO，则匿名用户不能上传或者新建文件夹，但可以删除或者重命名已经存在的文件夹。）
+## 默认值为NO。
+
+#############################################默认注释###########################################
+#chown_uploads=NO
+#设置是否改变匿名用户上传文件（非目录）的属主。默认值为NO。
+
+#chown_username=username
+#设置匿名用户上传文件（非目录）的属主名。建议不要设置为root。
+
+#anon_umask=077
+#设置匿名登入者新增或上传档案时的umask 值。默认值为077，则新建档案的对应权限为700。
+
+#deny_email_enable=NO
+#若是启动这项功能，则必须提供一个档案/etc/vsftpd/banner_emails，内容为email address。若是使用匿名登入，则会要求输入email address，
+#若输入的email address 在此档案内，则不允许进入。默认值为NO。
+
+#banned_email_file=/etc/vsftpd/banner_emails
+#此文件用来输入email address，只有在deny_email_enable=YES时，才会使用到此档案。若是使用匿名登入，则会要求输入email address，若输入的email address 在此档案内，则不允许进入。
+
+
+#########################################
+### 本地用户登录设置
+#########################################
+#
+##不允许匿名用户登入 :anonymous_enable=no
+#
+##控制是否允许本地用户登入，local_enable=YES
+#
+##local_root=/home/username
+##当本地用户登入时，将被更换到定义的目录下。默认值为各用户的家目录。
+#
+##是否允许登陆用户有写权限。write_enable=YES
+#
+#local_umask=022
+##本地用户新增档案时的umask 值。默认值为077。
+#
+#file_open_mode=0755
+##本地用户上传档案后的档案权限，与chmod所使用的数值相同。默认值为0666。
+#
+#chroot_local_user=YES
+##用于指定用户列表文件中的用户不允许切换到上级目录。默认值为NO。
+
+# 与实体用户有关的设定
+#userlist_enable=YES
+#userlist_deny=YES
+## 该文件必须存在 vsftpd 默认就存在该文件
+#userlist_file=/etc/vsftpd/user_list
+
+
+#########################################
+### 虚拟用户登录
+#########################################
+#
+#ipam_service_name=vsftpd
+##虚拟用户使用PAM认证方式。
+#
+#guest_enable= YES/NO（NO）
+##设置PAM使用的名称，默认值为/etc/pam.d/vsftpd。
+#
+#guest_username=ftp
+##启用虚拟用户。默认值为NO。
+#
+#virtual_use_local_privs=YES/NO（NO）
+##这里用来映射虚拟用户。默认值为ftp。
+##当该参数激活（YES）时，虚拟用户使用与本地用户相同的权限。当此参数关闭（NO）时，虚拟用户使用与匿名用户相同的权限。默认情况下此参数
+##是关闭的（NO）。
+#
+
+################################
+##SEL1/2 ftp工作模式：主动模式####
+################################
+
+## 开启主动模式：
+pasv_enable=no
+
+################################
+###SEL2/2 ftp工作模式：被动模式
+################################
+#
+### 开启被动模式
+### 默认是开启的，但是要指定一个端口范围，打开vsftpd.conf文件，在后面加上
+#pasv_enable=yes
+### 若设置为YES，则使用PASV工作模式；若设置为NO，则使用PORT模式。默认值为YES，即使用PASV工作模式。
+#pasv_min_port=30000
+### 在PASV工作模式下，数据连接可以使用的端口范围的最大端口，0 表示任意端口。默认值为0。
+#pasv_max_port=30999
+### 在PASV工作模式下，数据连接可以使用的端口范围的最小端口，0 表示任意端口。默认值为0。
+#
+### 表示端口范围为30000~30999，这个可以随意改。改完重启一下vsftpd
+### 由于指定这段端口范围，iptables也要相应的开启这个范围，所以像上面那样打开iptables文件。
+### 也是在21上下面另起一行，更那行差不多，只是把21 改为30000:30999,然后:wq保存，重启下iptables。这样就搞定了。
+#
+
+
+
