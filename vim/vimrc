@@ -1,0 +1,61 @@
+if has('nvim')
+  " 
+  set runtimepath^=~/.vim runtimepath+=~/.vim/after/
+  let &packpath = &runtimepath
+  "终端模式下<Esc>退出,<C-v><Esc>输入<Esc>
+  tnoremap <Esc> <C-\><C-n>
+  tnoremap <C-v><Esc> <Esc>
+  "终端模式下光标始终可见 
+  highlight! link TermCursor Cursor
+  highlight! TermCursorNC guibg=red guifg=white ctermbg=1 ctermfg=15
+  "window-switching
+  tnoremap <M-h> <c-\><c-n><c-w>h
+  tnoremap <M-j> <c-\><c-n><c-w>j
+  tnoremap <M-k> <c-\><c-n><c-w>k
+  tnoremap <M-l> <c-\><c-n><c-w>l
+endif
+
+" minpac config
+packadd minpac 
+call minpac#init()
+call minpac#add('tpope/vim-unimpaired')
+call minpac#add('tpope/vim-scriptease',{'type':'opt'})
+
+"FZF config
+nnoremap <C-p> :<C-u>FZF<CR> 
+
+" ALE basic config
+" For JavaScript files, use `eslint` (and only eslint)
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\ }
+
+" Mappings in the style of unimpaired-next
+nmap <silent> [W <Plug>(ale_first)
+nmap <silent> [w <Plug>(ale_previous)
+nmap <silent> ]w <Plug>(ale_next)
+nmap <silent> ]W <Plug>(ale_last)
+
+" ALE trigger when buffer save
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_save = 1                " default
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_filetype_changed = 0
+
+" grepper basic config
+let g:grepper       = {}
+let g:grepper.tools = ['grep', 'git', 'rg']
+
+" Search for the current word
+nnoremap <Leader>* :Grepper -cword -noprompt<CR>
+
+" Search for the current selection
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
+
+" window-switching
+nnoremap <M-h> <c-w>h
+nnoremap <M-j> <c-w>j
+nnoremap <M-k> <c-w>k
+nnoremap <M-l> <c-w>l
+
