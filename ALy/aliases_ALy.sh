@@ -3,7 +3,7 @@
 
 # --show-control-chars: help showing Korean or accented characters
 alias ggf='git fetch'
-alias ggs='git push'
+alias ggh='git push'
 alias ggl='git pull'
 alias ggc='git commit'
 alias ggs='git status'
