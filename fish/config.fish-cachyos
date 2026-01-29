@@ -1,0 +1,16 @@
+source /usr/share/cachyos-fish-config/cachyos-config.fish
+
+# overwrite greeting
+# potentially disabling fastfetch
+#function fish_greeting
+#    # smth smth
+#end
+#
+
+### ALy个人配置
+#aliases
+source ~/Shell/ALy/aliases_ALy.sh
+
+#nnn配置
+source ~/.config/nnn/nnn-env.sh
+
