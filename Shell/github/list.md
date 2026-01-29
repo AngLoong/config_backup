@@ -22,3 +22,7 @@ hyprwland主题
 主要使用其中的waybar等的配置
 git@github.com:sameemul-haque/dotfiles.git
 
+nnn
+主要使用其中的plugin
+https://github.com/jarun/nnn.git
+
