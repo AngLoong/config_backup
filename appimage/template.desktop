@@ -1,0 +1,15 @@
+[Desktop Entry]
+
+Name[zh_CN]=Fcitx 5 配置
+Name[zh_TW]=Fcitx 5 設定
+Name=Fcitx 5 Configuration
+GenericName[zh_CN]=输入法配置
+GenericName[zh_TW]=輸入法設定
+Comment[zh_CN]=修改 Fcitx 5 配置
+Comment[zh_TW]=變更 Fcitx 5 設定
+Comment=Change Fcitx 5 Configuration
+Exec=/usr/bin/fcitx5-configtool
+Icon=fcitx
+Type=Application
+Categories=Settings;
+

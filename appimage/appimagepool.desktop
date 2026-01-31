@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Name=AppImagePool
+Comment=appimagepool
+Exec=/home/angloong/Applications/appimagepool-5.1.0-x86_64.AppImage
+Icon=/home/angloong/Applications/appimagepool.png
+Type=Application
+Categories=Office;
+

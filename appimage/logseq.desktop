@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Name=Logseq
+Comment=logseq
+Exec=/home/angloong/Applications/Logseq-linux-x64-0.10.15.AppImage
+Icon=/home/angloong/Applications/logseq.png
+Type=Application
+Categories=Office;
+

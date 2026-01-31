@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Name=Drawio
+Comment=drawio
+Exec=/home/angloong/Applications/drawio-x86_64-29.3.0.AppImage
+Icon=/home/angloong/Applications/drawio.png
+Type=Application
+Categories=Office;
+

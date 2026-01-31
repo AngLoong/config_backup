@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Name=Obsidian
+Comment=obsidian
+Exec=/home/angloong/Applications/Obsidian-1.11.5.AppImage
+Icon=/home/angloong/Applications/obsidian.png
+Type=Application
+Categories=Office;
+
