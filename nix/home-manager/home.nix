@@ -1,3 +1,5 @@
+##<!--2026-01-31-->
+
 { config, pkgs, ... }:
 
 {
@@ -39,6 +41,7 @@
    };
 
 
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -46,6 +49,7 @@
     # # "Hello, world!" when run.
     # ##pkgs.hello
 	pkgs.vim
+	(pkgs.nnn.override { withNerdIcons = true; })
 	# pkgs.obsidian #需要从github下载，由于不可说原因，会报错
 	#({ nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     #  "obsidian"];
@@ -74,8 +78,14 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-	
-	
+
+        ##<!--kitty-->##  
+	".config/kitty/kitty.conf".source = dotfiles/kitty/kitty.conf;	
+
+	##<!--nnn-->##
+	".config/nnn/plugins/".source = dotfiles/nnn/plugins/.;
+	#fish quit on cd
+	".config/fish/functions/n.fish".source = dotfiles/nnn/n.fish;
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose
@@ -101,9 +111,24 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
-    XMODIFIERS = "@im=fcitx";
-    GTK_IM_MODULE = "fcitx";
-    QT_IM_MODULE = "fcitx";
+    	## <!--fcitx5--> 
+	XMODIFIERS = "@im=fcitx";
+    	GTK_IM_MODULE = "fcitx5";
+    	QT_IM_MODULE = "fcitx5";
+
+	## <!--nnn-->
+	# nnn所有的配置都是通过环境变量设置的，
+	# 所以只要将该文件source到相关文件即可，
+	#比如environment或bashrc或fish
+	#
+	# 启动选项
+	NN_OPTS = "d";  # 显示隐藏文件，详细模式
+	# 快捷书签
+	NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager";
+	# 加载插件（格式：插件名:快捷键）
+	NNN_PLUG = "z:fzcd;o:fzopen;";
+
+
   };
 
   # Let Home Manager install and manage itself.

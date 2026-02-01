@@ -1,3 +1,5 @@
+##<!--2026-01-31-20-03-->
+
 #MC # config.nix
 #MC
 #MC 当初始化`nixpkgs`时，例如`pkgs = import <nixpkgs> {}`，
