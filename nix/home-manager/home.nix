@@ -52,6 +52,7 @@
 	(pkgs.nnn.override { withNerdIcons = true; })
 	pkgs.feh
 	pkgs.meld
+	pkgs.aria2
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -91,6 +92,9 @@
 	".config/alacritty/alacritty.toml".source = dotfiles/alacritty/alacritty.toml;
 	# theme
 	".config/alacritty/themes/tokyo-night-storm.toml".source = dotfiles/alacritty/themes/tokyo-night-storm.toml;
+	## <!--aria2-->
+	".aria2/aria2.conf".source = dotfiles/aria2/aria2.conf;
+
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''

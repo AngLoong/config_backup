@@ -143,7 +143,7 @@ args = ["--login"]
 program = "/usr/bin/fish"
 
 [window]
-decorations = "full"
+decorations = "Full"
 #Window decorations.
 #[Full;None;Transparent;Buttonless]
 #	Full:Borders and title bar.
@@ -166,7 +166,7 @@ opacity = 0.6
 
 title = "Alacritty@Garuda"
 
-startup_mode = "Fullscreen"
+startup_mode = "Maximized"
 #Startup mode (changes require restart)
 #["windowed"|"Maximized"|"Fullscreen"|"simpleFullscreen"]    
 #	Windowed:Regular window.
