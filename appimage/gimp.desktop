@@ -1,0 +1,9 @@
+[Desktop Entry]
+
+Name=Gimp
+Comment=gimp
+Exec=/home/angloong/Applications/GIMP-3.0.8-1-x86_64.AppImage
+Icon=/home/angloong/Applications/gimp.png
+Type=Application
+Categories=Office;
+
