@@ -4,7 +4,7 @@
 
 # --show-control-chars: help showing Korean or accented characters
 #echo aliasesALY.sh
-#export TMP_D=aliase_start
+export TMP_D=aliase_start
 ##<!--git-->
 alias ggf='git fetch'
 alias ggh='git push'
@@ -18,4 +18,4 @@ alias ggo='git log'
 ##<!--feh-->
 alias fehf='feh -FZ'
 
-#export TMP_C=aliase_end
+export TMP_C=aliase_end

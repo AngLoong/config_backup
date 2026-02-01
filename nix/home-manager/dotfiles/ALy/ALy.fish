@@ -1,16 +1,11 @@
 #!/bin/sh
-##在~/.bash_profile添加source
-
-aly_dir=/home/angloong/.config/home-manager/dotfiles/ALy
-aly_sh_dir=$aly_dir/sh
 
 #set aly_dir /home/angloong/.config/home-manager/dotfiles/ALy
 #set aly_sh_dir $aly_dir/sh
 
-export TMP_A=aly_sh
-
 ##<!--aliases-->
 #. aly_sh_dir/aliases_ALy.sh
+
 . /home/angloong/.config/home-manager/dotfiles/ALy/sh/aliases_ALy.sh
 
 #for file in $(ls $aly_sh_dir) 

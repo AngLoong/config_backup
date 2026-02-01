@@ -1,0 +1,194 @@
+#save_to_clipboard = true
+#"window.dynamic_title" = true
+
+[general]
+import = [
+    "~/.config/alacritty/themes/tokyo-night-storm.toml"
+    ]
+
+working_directory = "None"
+
+#Directory the shell is started in. When this is unset, or "None", the working directory of the parent process will be used.
+#Default: "None"
+
+live_config_reload = true 
+#Live config reload (changes require restart)
+#Default: true
+#[true,false]
+
+#ipc_socket = true | false 
+# (unix only)
+#Offer IPC using alacritty msg
+#Default: true
+
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+#[colors.bright]
+#black = "0xa6896b"
+#blue = "0xF35645"
+#cyan = "0xFAD32F"
+#green = "0xEB3247"
+#magenta = "0xF6A73B"
+#red = "0x5F4149"
+#white = "0xeec49a"
+#yellow = "0xBC4349"
+#
+#[colors.cursor]
+#cursor = "0xeec49a"
+#text = "0x0a1124"
+#
+#[colors.normal]
+#black = "0x0a1124"
+#blue = "0xF35645"
+#cyan = "0xFAD32F"
+#green = "0xEB3247"
+#magenta = "0xF6A73B"
+#red = "0x5F4149"
+#white = "0xeec49a"
+#yellow = "0xBC4349"
+#
+#[colors.primary]
+#background = "0x0a1124"
+#foreground = "0xeec49a"
+
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "PasteSelection"
+key = "Insert"
+mods = "Shift"
+
+[[keyboard.bindings]]
+action = "ResetFontSize"
+key = "Key0"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Equals"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "IncreaseFontSize"
+key = "Plus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+[[keyboard.bindings]]
+action = "DecreaseFontSize"
+key = "Minus"
+mods = "Control"
+
+#[general]
+#live_config_reload = true
+
+[terminal]
+
+
+[cursor]
+style = "Underline"
+
+[env]
+#All key-value pairs in the [env] section will be added as environment variables for any process spawned by Alacritty, including its shell. Some entries may override variables set by alacritty itself.    
+TERM = "xterm-256color"
+
+[font]
+size = 20.0
+
+normal = { family = "JetBrainsMono Nerd Font" , style = "Regular" }
+bold = { family = "JetBrainsMono Nerd Font" }
+italic = { family = "JetBrainsMono Nerd Font" }
+bold_italic = { family = "JetBrainsMono Nerd Font" }
+
+offset = { x = 0, y = 0 }
+#Offset is the extra space around each character. y can be thought of as modifying the line spacing, and x as modifying the letter spacing.
+#Default: { x = 0, y = 0 }
+
+#[font.bold]
+#family = "FiraCode Nerd Font Mono"
+#
+#[font.bold_italic]
+#family = "FiraCode Nerd Font Mono"
+#
+#[font.italic]
+#family = "FiraCode Nerd Font Mono"
+#
+#[font.normal]
+#family = "FiraCode Nerd Font Mono"
+
+[mouse]
+hide_when_typing = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[terminal.shell]
+args = ["--login"]
+program = "/usr/bin/fish"
+
+[window]
+decorations = "full"
+#Window decorations.
+#[Full;None;Transparent;Buttonless]
+#	Full:Borders and title bar.
+#	None:Neither borders nor title bar.
+#	Transparent (macOS only):Title bar, transparent background and title bar buttons.
+#	Buttonless (macOS only):Title bar, transparent background and no title bar buttons.
+#Default: "Full"
+
+decorations_theme_variant = "dark"
+dynamic_padding = true
+opacity = 0.6
+#Background opacity as a floating point number from 0.0 to 1.0. The value 0.0 is completely transparent and 1.0 is opaque.
+#Default: 1.0
+
+#blur = alse 
+# (works on macOS/KDE Wayland)
+#Request compositor to blur content behind transparent windows.
+#Default: false
+
+
+title = "Alacritty@Garuda"
+
+startup_mode = "Fullscreen"
+#Startup mode (changes require restart)
+#["windowed"|"Maximized"|"Fullscreen"|"simpleFullscreen"]    
+#	Windowed:Regular window.
+#	Maximized:The window will be maximized on startup.
+#	Fullscreen:The window will be fullscreened on startup.
+#	SimpleFullscreen (macOS only):Same as Fullscreen, but you can stack windows on top.
+#Default: "Windowed"
+
+level = "Normal" 
+#Sets window level.
+#["Normal" | "AlwaysOnTop"]
+#	Normal:Window adheres to system's default z-order.
+#	AlwaysOnTop:Window is a toplevel window.
+#Default: "Normal"
+
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.dimensions]
+columns = 100
+lines = 30
+
+#[keyboard]

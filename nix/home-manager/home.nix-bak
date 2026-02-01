@@ -51,7 +51,6 @@
 	pkgs.vim
 	(pkgs.nnn.override { withNerdIcons = true; })
 	pkgs.feh
-	pkgs.meld
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -88,9 +87,7 @@
 	# aliases
 	".config/fish/conf.d/aliases.fish".source = dotfiles/ALy/ALy.fish;
 	## <!--alacritty-->
-	".config/alacritty/alacritty.toml".source = dotfiles/alacritty/alacritty.toml;
-	# theme
-	".config/alacritty/themes/tokyo-night-storm.toml".source = dotfiles/alacritty/themes/tokyo-night-storm.toml;
+	".config/alacritty/alacritty.toml".source = dotfiles/alacritty/alacritty.toml"
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -115,10 +112,11 @@
   #
   #  /etc/profiles/per-user/angloong/etc/profile.d/hm-session-vars.sh
   #
+  
   home.sessionVariables = {
     # EDITOR = "emacs";
-    	## <!--fcitx5--> 
-	XMODIFIERS = "@im=fcitx";
+    	## <!--fcitx5-->
+    	XMODIFIERS = "@im=fcitx";
     	GTK_IM_MODULE = "fcitx5";
     	QT_IM_MODULE = "fcitx5";
 
@@ -133,7 +131,6 @@
 	NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager";
 	# 加载插件（格式：插件名:快捷键）
 	NNN_PLUG = "z:fzcd;o:fzopen;";
-
 
   };
 
