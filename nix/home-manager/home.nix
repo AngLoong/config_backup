@@ -42,6 +42,7 @@
 
 
 
+
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
@@ -53,6 +54,7 @@
 	pkgs.feh
 	pkgs.meld
 	pkgs.aria2
+	#pkgs.lunarvim
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -68,6 +70,39 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+
+
+  programs = {
+    neovim = {
+      enable = true;
+	##nvim-tree-lua
+			##lualine-nvim
+		##	cmp-git
+		##	cmp-fish
+		##	luasnip
+      plugins = [
+
+        pkgs.vimPlugins.lualine-nvim
+
+        # Example Plugin: nvim-tree-lua
+        pkgs.vimPlugins.nvim-tree-lua
+
+        # Example Plugin: vim-startify with configuration
+
+  
+        # Example Plugin: nvim-colorizer-lua with Lua config
+        # Due to how the runtimepath for Lua modules is processed, your configuration may require
+        # packadd! plugin-name to require a module. A home-manager example:
+
+
+        # Example Plugin: nvim-treesitter with Lua config
+
+      ];
+      waylandSupport = true; # wayland clipboard support
+    };
+  };
+
+ 
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -94,6 +129,10 @@
 	".config/alacritty/themes/tokyo-night-storm.toml".source = dotfiles/alacritty/themes/tokyo-night-storm.toml;
 	## <!--aria2-->
 	".aria2/aria2.conf".source = dotfiles/aria2/aria2.conf;
+
+	## <!--nvchad-->
+	".config/nvim".source = dotfiles/nvchad;
+	".config/nvim".recursive = true;
 
 
     # # You can also set the file content immediately.
