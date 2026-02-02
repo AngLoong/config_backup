@@ -26,3 +26,14 @@ nnn
 主要使用其中的plugin
 https://github.com/jarun/nnn.git
 
+lavyvim
+预配置的nvim
+https://github.com/LazyVim/starter
+
+
+nvchad
+预配置的nvim
+https://github.com/NvChad/starter
+
+ 
+ 
