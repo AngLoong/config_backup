@@ -1,4 +1,4 @@
-##<!--2026-01-31-->
+##<!--2026-02-03-->
 
 { config, pkgs, ... }:
 
@@ -111,6 +111,9 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+
+	##<!--rime-->##
+	".local/share/fcitx5/rime/default.custom.yaml".source = dotfiles/rime/default.custom.yaml;
 
         ##<!--kitty-->##  
 	".config/kitty/kitty.conf".source = dotfiles/kitty/kitty.conf;	
