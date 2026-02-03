@@ -1,0 +1,26 @@
+window {
+    background-color: #333333;
+    font-family: "WenQuanYi Zen Hei Mono";
+    font-size: 14px;
+}
+
+#input {
+    border: none;
+    color: #FFFFFF;
+    background-color: #555555;
+}
+
+#outer-box {
+    margin: 10px;
+    background-color: #333333;
+}
+
+#scroll {
+    margin: 5px 0px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+#scroll label {
+    margin: 2px 0px;
+}
