@@ -137,6 +137,14 @@
 	".config/nvim".source = dotfiles/nvchad;
 	".config/nvim".recursive = true;
 
+  ## <!--hyprland-->
+  ".config/hypr".source = dotfiles/hyprland/hypr;
+  ".config/mako".source = dotfiles/hyprland/mako;
+  ".config/waybar".source = dotfiles/hyprland/waybar;
+  "config/wofi".source = dotfiles/hyprland/wofi;
+
+  ## <!--niri-->
+  ".config/niri".source = dotfiles/niri;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
