@@ -54,7 +54,6 @@
 	pkgs.feh
 	pkgs.meld
 	pkgs.aria2
-	#pkgs.lunarvim
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -137,14 +136,13 @@
 	".config/nvim".source = dotfiles/nvchad;
 	".config/nvim".recursive = true;
 
-  ## <!--hyprland-->
-  ".config/hypr".source = dotfiles/hyprland/hypr;
-  ".config/mako".source = dotfiles/hyprland/mako;
-  ".config/waybar".source = dotfiles/hyprland/waybar;
-  ".config/wofi".source = dotfiles/hyprland/wofi;
+  	## <!--hyprland-->
+  	".config/hypr".source = dotfiles/hyprland/hypr;
+	  ".config/mako".source = dotfiles/hyprland/mako;
+  	".config/waybar".source = dotfiles/hyprland/waybar;
+  	".config/wofi".source = dotfiles/hyprland/wofi;
 
-  ## <!--niri-->
-  ".config/niri".source = dotfiles/niri;
+
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
