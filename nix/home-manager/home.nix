@@ -141,7 +141,7 @@
   ".config/hypr".source = dotfiles/hyprland/hypr;
   ".config/mako".source = dotfiles/hyprland/mako;
   ".config/waybar".source = dotfiles/hyprland/waybar;
-  "config/wofi".source = dotfiles/hyprland/wofi;
+  ".config/wofi".source = dotfiles/hyprland/wofi;
 
   ## <!--niri-->
   ".config/niri".source = dotfiles/niri;
