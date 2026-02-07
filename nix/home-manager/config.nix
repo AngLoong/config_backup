@@ -13,7 +13,7 @@
 #MC 下面是添加了注解的我的`config.nix`：
 {
   #MC 禁用安装非本地的包，比如禁止x86_64-linux的包被安装到aarch64-linux上。
-  nixpkgs.config.allowUnsupportedSystem = false;
+  #nixpkgs.config.allowUnsupportedSystem = false;
   nixpkgs.config.allowUnfree = true;
   #packageOverrides = pkgs: rec {
   #  #MC 添加nix user repository (NUR)到nixpkgs里。

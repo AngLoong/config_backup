@@ -18,8 +18,7 @@
   home.stateVersion = "25.11"; # Please read the comment before changing.
 
   imports = [
-  ##  ./config.nix
-
+      ./config.nix
   ];
 
 ##  i18n.inputMethod = {
@@ -50,11 +49,13 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # ##pkgs.hello
-##	pkgs.vim
-	(pkgs.nnn.override { withNerdIcons = true; })
-##	pkgs.feh
-##	pkgs.meld
-##	pkgs.aria2
+    ##	pkgs.vim
+	  (pkgs.nnn.override { withNerdIcons = true; })
+    ##	pkgs.feh
+    ##	pkgs.meld
+    ##	pkgs.aria2
+    ##pkgs.mihomo
+    pkgs.deluge
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -73,34 +74,19 @@
 
 
   programs = {
+    ## <!--nvim--> 
     neovim = {
       enable = true;
-	##nvim-tree-lua
-			##lualine-nvim
-		##	cmp-git
-		##	cmp-fish
-		##	luasnip
       plugins = [
-
-        pkgs.vimPlugins.lualine-nvim
-
-        # Example Plugin: nvim-tree-lua
-        # pkgs.vimPlugins.nvim-tree-lua
-
-        # Example Plugin: vim-startify with configuration
-
-  
-        # Example Plugin: nvim-colorizer-lua with Lua config
-        # Due to how the runtimepath for Lua modules is processed, your configuration may require
-        # packadd! plugin-name to require a module. A home-manager example:
-
-
-        # Example Plugin: nvim-treesitter with Lua config
-
-                ];
+      ];
       waylandSupport = true; # wayland clipboard support
-          };
-     };
+    };
+    ## <!--vscode-->
+    #vscode = {
+    #  enable = true;
+    #};
+  
+  };
 
  
 
@@ -132,18 +118,18 @@
 	# theme
 	#".config/alacritty/themes/tokyo-night-storm.toml".source = dotfiles/alacritty/themes/tokyo-night-storm.toml;
 	
-   ## <!--aria2-->
+        ## <!--aria2-->
 	#".aria2/aria2.conf".source = dotfiles/aria2/aria2.conf;
 
-	## <!--nvchad-->
-	".config/nvim".source = dotfiles/nvchad;
+	## <!--nvim-->
+	".config/nvim".source = dotfiles/lazyvim;
 	".config/nvim".recursive = true;
 
   	## <!--hyprland-->
-  	#".config/hypr".source = dotfiles/hyprland/hypr;
-	#".config/mako".source = dotfiles/hyprland/mako;
-  	#".config/waybar".source = dotfiles/hyprland/waybar;
-  	#".config/wofi".source = dotfiles/hyprland/wofi;
+  	".config/hypr".source = dotfiles/hyprland/hypr;
+	  ".config/mako".source = dotfiles/hyprland/mako;
+  	".config/waybar".source = dotfiles/hyprland/waybar;
+  	".config/wofi".source = dotfiles/hyprland/wofi;
 
 
 
