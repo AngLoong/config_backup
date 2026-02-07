@@ -56,7 +56,6 @@
     ##	pkgs.aria2
     ##pkgs.mihomo
     pkgs.deluge
-    pkgs.thunderbird
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
