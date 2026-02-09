@@ -21,7 +21,6 @@
       ./config.nix
   ];
 
-## <!--fcitc5-->
 ##  i18n.inputMethod = {
 ##      type = "fcitx5";
 ##      enable = true;
@@ -32,7 +31,7 @@
 ##          fcitx5-nord            # a color theme
 ##     	  qt6Packages.fcitx5-configtool 
 ##	  #fcitx5-rime
-##	  fcitx5-mozc # 日语输入法
+##	  fcitx5-mozc
 ##	  (fcitx5-rime.override {
 ##       	      rimeDataPkgs = [
 ##                  pkgs.rime-ice
@@ -58,7 +57,6 @@
     ##pkgs.mihomo
     pkgs.deluge
     pkgs.thunderbird
-    pkgs.yandex-disk
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -84,7 +82,6 @@
       ];
       waylandSupport = true; # wayland clipboard support
     };
-    
     ## <!--vscode-->
     #vscode = {
     #  enable = true;
@@ -101,39 +98,33 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
-  
-    ## <!--git-->
-    #".gitconfig".source = dotfiles/git/gitconfig;
-    
-    ## <!--ssh-->
-    #".ssh/config".source = dotfiles/ssh/config;
-    
-	  ##<!--rime-->##
-	  #".local/share/fcitx5/rime/default.custom.yaml".source = dotfiles/rime/default.custom.yaml;
 
-    ##<!--kitty-->##  
-	  #".config/kitty/kitty.conf".source = dotfiles/kitty/kitty.conf;	
+	##<!--rime-->##
+	#".local/share/fcitx5/rime/default.custom.yaml".source = dotfiles/rime/default.custom.yaml;
 
-	  ##<!--nnn-->##
-	  #".config/nnn/plugins/".source = dotfiles/nnn/plugins/.;
-	  #fish quit on cd
-	  #".config/fish/functions/n.fish".source = dotfiles/nnn/n.fish;
+        ##<!--kitty-->##  
+	#".config/kitty/kitty.conf".source = dotfiles/kitty/kitty.conf;	
 
-	  ## <!--ALy-->
-	  # aliases
-	  ".config/fish/conf.d/aliases.fish".source = dotfiles/ALy/ALy.fish;
+	##<!--nnn-->##
+	#".config/nnn/plugins/".source = dotfiles/nnn/plugins/.;
+	#fish quit on cd
+	#".config/fish/functions/n.fish".source = dotfiles/nnn/n.fish;
+
+	## <!--ALy-->
+	# aliases
+	".config/fish/conf.d/aliases.fish".source = dotfiles/ALy/ALy.fish;
 	
-    ## <!--alacritty-->
-	  #".config/alacritty/alacritty.toml".source = dotfiles/alacritty/alacritty.toml;
-	  # theme
-	  #".config/alacritty/themes/tokyo-night-storm.toml".source = dotfiles/alacritty/themes/tokyo-night-storm.toml;
+        ## <!--alacritty-->
+	#".config/alacritty/alacritty.toml".source = dotfiles/alacritty/alacritty.toml;
+	# theme
+	#".config/alacritty/themes/tokyo-night-storm.toml".source = dotfiles/alacritty/themes/tokyo-night-storm.toml;
 	
-    ## <!--aria2-->
-	  #".aria2/aria2.conf".source = dotfiles/aria2/aria2.conf;
+        ## <!--aria2-->
+	#".aria2/aria2.conf".source = dotfiles/aria2/aria2.conf;
 
-	  ## <!--nvim-->
-	  ".config/nvim".source = dotfiles/lazyvim;
-	  ".config/nvim".recursive = true;
+	## <!--nvim-->
+	".config/nvim".source = dotfiles/lazyvim;
+	".config/nvim".recursive = true;
 
   	## <!--hyprland-->
   	".config/hypr".source = dotfiles/hyprland/hypr;
@@ -173,17 +164,17 @@
     	   #GTK_IM_MODULE = "fcitx5";
     	   #QT_IM_MODULE = "fcitx5";
 
-	  ## <!--nnn-->
-	  ## nnn所有的配置都是通过环境变量设置的，
-	  ##   所以只要将该文件source到相关文件即可，
-	  ##   比如environment或bashrc或fish
-	  ##-------------------------------------
-	  ## 启动选项
-	  NN_OPTS = "d";  # 显示隐藏文件，详细模式
-	  ##快捷书签
-	  NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager";
-	  ## 加载插件（格式：插件名:快捷键）
-	  NNN_PLUG = "z:fzcd;o:fzopen;";
+	## <!--nnn-->
+	## nnn所有的配置都是通过环境变量设置的，
+	##   所以只要将该文件source到相关文件即可，
+	##   比如environment或bashrc或fish
+	##
+	## 启动选项
+	NN_OPTS = "d";  # 显示隐藏文件，详细模式
+	##快捷书签
+	NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager";
+	## 加载插件（格式：插件名:快捷键）
+	NNN_PLUG = "z:fzcd;o:fzopen;";
 
 
   };

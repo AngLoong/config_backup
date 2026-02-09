@@ -1,0 +1,7 @@
+[user]
+	name = AngLoong
+	email = angloong@outlook.com
+[core]
+	editor = vim
+[merge]
+	tool = meld
