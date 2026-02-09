@@ -181,7 +181,7 @@
 	  ## 启动选项
 	  NN_OPTS = "d";  # 显示隐藏文件，详细模式
 	  ##快捷书签
-	  NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager";
+	  NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager;s:~/Shell/scripts";
 	  ## 加载插件（格式：插件名:快捷键）
 	  NNN_PLUG = "z:fzcd;o:fzopen;";
 
