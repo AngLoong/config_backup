@@ -18,31 +18,10 @@
   home.stateVersion = "25.11"; # Please read the comment before changing.
 
   imports = [
-      ./config.nix
+    ./config.nix
+    ./modules/core/editor
+
   ];
-
-## <!--fcitc5-->
-##  i18n.inputMethod = {
-##      type = "fcitx5";
-##      enable = true;
-##      fcitx5.waylandFrontend = true;
-##      fcitx5.addons = with pkgs; [
-##          fcitx5-gtk             # alternatively, kdePackages.fcitx5-qt
-##          #fcitx5-chinese-addons  # table input method support
-##          fcitx5-nord            # a color theme
-##     	  qt6Packages.fcitx5-configtool 
-##	  #fcitx5-rime
-##	  fcitx5-mozc # 日语输入法
-##	  (fcitx5-rime.override {
-##       	      rimeDataPkgs = [
-##                  pkgs.rime-ice
-##              ];
-##          })
-##     ];
-##   };
-
-
-
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
@@ -75,15 +54,14 @@
     # '')
   ];
 
-
   programs = {
     ## <!--nvim--> 
-    neovim = {
-      enable = true;
-      plugins = [
-      ];
-      waylandSupport = true; # wayland clipboard support
-    };
+    ##neovim = {
+    ##  enable = true;
+    ##  plugins = [
+    ##  ];
+    ##  waylandSupport = true; # wayland clipboard support
+    ##};
     
     ## <!--vscode-->
     #vscode = {
@@ -132,12 +110,12 @@
 	  #".aria2/aria2.conf".source = dotfiles/aria2/aria2.conf;
 
 	  ## <!--nvim-->
-	  ".config/nvim".source = dotfiles/lazyvim;
-	  ".config/nvim".recursive = true;
+    ##".config/nvim".source = dotfiles/lazyvim;
+    ##".config/nvim".recursive = true;
 
   	## <!--hyprland-->
-  	".config/hypr".source = dotfiles/hyprland/hypr;
-	  ".config/mako".source = dotfiles/hyprland/mako;
+    #".config/hypr".source = dotfiles/hyprland/hypr;
+    ".config/mako".source = dotfiles/hyprland/mako;
   	".config/waybar".source = dotfiles/hyprland/waybar;
   	".config/wofi".source = dotfiles/hyprland/wofi;
 

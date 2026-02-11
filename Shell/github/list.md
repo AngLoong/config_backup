@@ -35,5 +35,9 @@ nvchad
 预配置的nvim
 https://github.com/NvChad/starter
 
- 
+obsidian-nutstore-sync
+git@github.com:nutstore/obsidian-nutstore-sync.git
+
+nix-config
+git@github.com:ryan4yin/nix-config.git
  
