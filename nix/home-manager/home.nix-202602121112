@@ -1,4 +1,4 @@
-##<!--2026-02-12-->
+##<!--2026-02-05-->
 
 { config, pkgs, ... }:
 
@@ -20,9 +20,7 @@
   imports = [
     ./config.nix
     ./modules/core/editor
-    ./modules/core/nnn.nix
-    ./modules/gui/net_apps.nix
-    ./dotfiles
+
   ];
 
   # The home.packages option allows you to install Nix packages into your
@@ -32,10 +30,14 @@
     # # "Hello, world!" when run.
     # ##pkgs.hello
     ##	pkgs.vim
+	  (pkgs.nnn.override { withNerdIcons = true; })
     ##	pkgs.feh
     ##	pkgs.meld
     ##	pkgs.aria2
     ##pkgs.mihomo
+    pkgs.deluge
+    pkgs.thunderbird
+    pkgs.yandex-disk
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -53,6 +55,18 @@
   ];
 
   programs = {
+    ## <!--nvim--> 
+    ##neovim = {
+    ##  enable = true;
+    ##  plugins = [
+    ##  ];
+    ##  waylandSupport = true; # wayland clipboard support
+    ##};
+    
+    ## <!--vscode-->
+    #vscode = {
+    #  enable = true;
+    #};
   
   };
 
@@ -66,6 +80,45 @@
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
   
+    ## <!--git-->
+    #".gitconfig".source = dotfiles/git/gitconfig;
+    
+    ## <!--ssh-->
+    #".ssh/config".source = dotfiles/ssh/config;
+    
+	  ##<!--rime-->##
+	  #".local/share/fcitx5/rime/default.custom.yaml".source = dotfiles/rime/default.custom.yaml;
+
+    ##<!--kitty-->##  
+	  #".config/kitty/kitty.conf".source = dotfiles/kitty/kitty.conf;	
+
+	  ##<!--nnn-->##
+	  #".config/nnn/plugins/".source = dotfiles/nnn/plugins/.;
+	  #fish quit on cd
+	  #".config/fish/functions/n.fish".source = dotfiles/nnn/n.fish;
+
+	  ## <!--ALy-->
+	  # aliases
+	  ".config/fish/conf.d/aliases.fish".source = dotfiles/ALy/ALy.fish;
+	
+    ## <!--alacritty-->
+	  #".config/alacritty/alacritty.toml".source = dotfiles/alacritty/alacritty.toml;
+	  # theme
+	  #".config/alacritty/themes/tokyo-night-storm.toml".source = dotfiles/alacritty/themes/tokyo-night-storm.toml;
+	
+    ## <!--aria2-->
+	  #".aria2/aria2.conf".source = dotfiles/aria2/aria2.conf;
+
+	  ## <!--nvim-->
+    ##".config/nvim".source = dotfiles/lazyvim;
+    ##".config/nvim".recursive = true;
+
+  	## <!--hyprland-->
+    #".config/hypr".source = dotfiles/hyprland/hypr;
+    ".config/mako".source = dotfiles/hyprland/mako;
+  	".config/waybar".source = dotfiles/hyprland/waybar;
+  	".config/wofi".source = dotfiles/hyprland/wofi;
+
 
 
     # # You can also set the file content immediately.
@@ -93,6 +146,23 @@
   #
   home.sessionVariables = {
     # EDITOR = "emacs";
+    	## <!--fcitx5--> 
+	   #XMODIFIERS = "@im=fcitx";
+    	   #GTK_IM_MODULE = "fcitx5";
+    	   #QT_IM_MODULE = "fcitx5";
+
+	  ## <!--nnn-->
+	  ## nnn所有的配置都是通过环境变量设置的，
+	  ##   所以只要将该文件source到相关文件即可，
+	  ##   比如environment或bashrc或fish
+	  ##-------------------------------------
+	  ## 启动选项
+	  NN_OPTS = "d";  # 显示隐藏文件，详细模式
+	  ##快捷书签
+	  NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager;s:~/Shell/scripts";
+	  ## 加载插件（格式：插件名:快捷键）
+	  NNN_PLUG = "z:fzcd;o:fzopen;";
+
 
   };
 
