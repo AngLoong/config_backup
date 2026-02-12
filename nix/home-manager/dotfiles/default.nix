@@ -28,6 +28,9 @@
   	".config/waybar".source = hyprland/waybar;
   	".config/wofi".source = hyprland/wofi;
 
+    ## <!--ghostty-->
+    ".config/ghostty".source = ./ghostty;
+
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
     #   org.gradle.console=verbose

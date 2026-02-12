@@ -1,6 +1,6 @@
 ##<!--2026-02-12-->
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, nixgl, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -19,8 +19,10 @@
 
   imports = [
     ./config.nix
+    #./nixgl.nix
     ./modules/core/editor
     ./modules/core/nnn.nix
+    ./modules/core/yazi.nix
     ./modules/gui/net_apps.nix
     ./dotfiles
   ];
