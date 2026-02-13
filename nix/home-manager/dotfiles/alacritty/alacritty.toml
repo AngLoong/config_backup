@@ -3,7 +3,10 @@
 
 [general]
 import = [
-    "~/.config/alacritty/themes/tokyo-night-storm.toml"
+    "./themes/catppuccin-mocha.toml"
+    #"~/Shell/github/alacritty_themes/themes/seashells.toml"
+    #"~/Shell/github/alacritty_themes/themes/solarized_light.toml"
+    #"~/Shell/github/alacritty_themes/themes/solarized_osaka.toml"
     ]
 
 working_directory = "None"
@@ -164,7 +167,7 @@ opacity = 0.6
 #Default: false
 
 
-title = "Alacritty@Garuda"
+title = "Alacritty"
 
 startup_mode = "Maximized"
 #Startup mode (changes require restart)
