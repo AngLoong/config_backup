@@ -18,10 +18,10 @@ services:
         target: /media2
         read_only: true
       # Optional - extra fonts to be used during transcoding with subtitle burn-in
-      #- type: bind
-      #  source: /path/to/fonts
-      #  target: /usr/local/share/fonts/custom
-      #  read_only: true
+      - type: bind
+        source: /home/angloong/Dockers/jellyfin/fonts
+        target: /fonts
+        read_only: true
     restart: 'unless-stopped'
     # Optional - alternative address used for autodiscovery
     environment:

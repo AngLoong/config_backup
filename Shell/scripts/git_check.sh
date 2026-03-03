@@ -4,6 +4,7 @@ path_con_bac=~/Backup/config_backup/
 path_con_bac_gitee=~/Backup/config_backup-gitee/
 path_obsidian=~/Notes/ObsidianWorkspaces/
 path_logseq=~/Notes/LogseqWorkspaces/
+path_home_manager=~/.config/home-manager/
 
 ischanged() {
   cd "$1"
@@ -15,7 +16,7 @@ ischanged() {
 
 }
 
-for var in $path_con_bac $path_con_bac_gitee $path_obsidian $path_logseq; do
+for var in $path_con_bac $path_con_bac_gitee $path_obsidian $path_logseq $path_home_manager; do
   ischanged $var
 done
 
