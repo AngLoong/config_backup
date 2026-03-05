@@ -20,10 +20,13 @@
   imports = [
     ./config.nix
     #./nixgl.nix
+    ./modules/core/shell
     ./modules/core/editor
     ./modules/core/nnn.nix
     ./modules/core/yazi.nix
     ./modules/gui/net_apps.nix
+    #./modules/gui/zettlr.nix opengl
+    ./modules/tui/lazygit.nix
     ./dotfiles
   ];
 

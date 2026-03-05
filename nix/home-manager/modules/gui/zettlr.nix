@@ -1,0 +1,16 @@
+{ config, pkgs, ... }:  # 这些参数由构建系统自动输入，你先别管
+
+{
+  home.packages = [
+	  pkgs.zettlr
+  ];
+
+  home.file = {
+      
+  };
+
+  home.sessionVariables = {
+
+  };
+}
+

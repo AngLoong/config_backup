@@ -1,5 +1,17 @@
 
 theme = "catppuccin-macchiato.conf"
+font-family = "JetBrainsMono Nerd Font"
 font-size = 22
 background-opacity = "0.65"
+unfocused-split-opacity = 0.5
+
+# 设置窗口水平内边距
+window-padding-x = 15
+
+# 设置窗口垂直内边距
+window-padding-y = 15
+
+# 默认的命令解释器,这里我使用的是 fish shell
+command = /home/angloong/.nix-profile/bin/nu
+
 

@@ -1,6 +1,6 @@
-##<!--2026-01-31-->
+##<!--2026-02-12-->
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, nixgl, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -19,26 +19,25 @@
 
   imports = [
     ./config.nix
+    #./nixgl.nix
+    ./modules/core/editor
+    ./modules/core/nnn.nix
+    ./modules/core/yazi.nix
+    ./modules/gui/net_apps.nix
+    #./modules/gui/ghostty.nix
+    ./dotfiles
   ];
 
-  i18n.inputMethod = {
-      type = "fcitx5";
-      enable = true;
-      fcitx5.waylandFrontend = true;
-      fcitx5.addons = with pkgs; [
-          fcitx5-gtk             # alternatively, kdePackages.fcitx5-qt
-          #fcitx5-chinese-addons  # table input method support
-          fcitx5-nord            # a color theme
-     	  qt6Packages.fcitx5-configtool 
-	  #fcitx5-rime
-	  fcitx5-mozc
-	  (fcitx5-rime.override {
-       	      rimeDataPkgs = [
-                  pkgs.rime-ice
-              ];
-          })
-     ];
-   };
+  targets.genericLinux.nixGL.packages = import <nixgl> { inherit pkgs; };
+  targets.genericLinux.nixGL = {
+    #packages = nixgl.packages;
+    defaultWrapper = "mesa";
+    #offloadWrapper = "nvidiaPrime";
+    #installScripts = [ "mesa" "nvidiaPrime" ];
+    installScripts = [ "mesa" ];
+  };
+
+
 
 
 
@@ -48,9 +47,11 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # ##pkgs.hello
-	pkgs.vim
-	(pkgs.nnn.override { withNerdIcons = true; })
-	pkgs.feh
+    ##	pkgs.vim
+    ##	pkgs.feh
+    ##	pkgs.meld
+    ##	pkgs.aria2
+    ##pkgs.mihomo
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -67,6 +68,12 @@
     # '')
   ];
 
+  programs = {
+  
+  };
+
+ 
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -74,20 +81,8 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     # ".screenrc".source = dotfiles/screenrc;
+  
 
-        ##<!--kitty-->##  
-	".config/kitty/kitty.conf".source = dotfiles/kitty/kitty.conf;	
-
-	##<!--nnn-->##
-	".config/nnn/plugins/".source = dotfiles/nnn/plugins/.;
-	#fish quit on cd
-	".config/fish/functions/n.fish".source = dotfiles/nnn/n.fish;
-
-	## <!--ALy-->
-	# aliases
-	".config/fish/conf.d/aliases.fish".source = dotfiles/ALy/ALy.fish;
-	## <!--alacritty-->
-	".config/alacritty/alacritty.toml".source = dotfiles/alacritty/alacritty.toml"
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
@@ -112,25 +107,8 @@
   #
   #  /etc/profiles/per-user/angloong/etc/profile.d/hm-session-vars.sh
   #
-  
   home.sessionVariables = {
     # EDITOR = "emacs";
-    	## <!--fcitx5-->
-    	XMODIFIERS = "@im=fcitx";
-    	GTK_IM_MODULE = "fcitx5";
-    	QT_IM_MODULE = "fcitx5";
-
-	## <!--nnn-->
-	# nnn所有的配置都是通过环境变量设置的，
-	# 所以只要将该文件source到相关文件即可，
-	#比如environment或bashrc或fish
-	#
-	# 启动选项
-	NN_OPTS = "d";  # 显示隐藏文件，详细模式
-	# 快捷书签
-	NNN_BMS = "h:~/;w:~/Workspaces;n:~/Notes;m:~/.config/home-manager";
-	# 加载插件（格式：插件名:快捷键）
-	NNN_PLUG = "z:fzcd;o:fzopen;";
 
   };
 

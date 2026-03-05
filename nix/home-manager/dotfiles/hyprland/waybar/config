@@ -18,27 +18,34 @@
     "modules-left": [
         //"custom/rofi",
         "hyprland/workspaces",
-        //"hyprland/submap",
-        "temperature",
+        "hyprland/submap",
+        //"temperature",
         //"idle_inhibitor",
         //"mpd"
-        "custom/spotify"
+        //"custom/spotify"
+        "wlr/taskbar"
     ],
     "modules-center": [
         //"hyprland/window"
-        "clock#date",
-        "custom/weather"
+        //"clock#date"
+        "clock",
+        "custom/storage",
+        "memory",
+        "cpu"
+        //"custom/weather"
         //"custom/gammastep"
     ],
     "modules-right": [
         "backlight",
-        "custom/storage",
-        "memory",
-        "cpu",
-        "battery",
+        //"custom/storage",
+        //"memory",
+        //"cpu",
+        //"battery",
         //"pulseaudio",
         "wireplumber",
-        "custom/screenshot_t",
+        "network",
+        "bluetooth",
+        //"custom/screenshot_t",
         "tray",
         "custom/power"
     ],
@@ -56,7 +63,18 @@
         "format": " |",
         "tooltip": false
     },
-
+    
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "active-first": true,
+        "icon-theme": "WhiteSur",
+        "icon-size": 25
+   	},
+ 
 
     "custom/rofi": {
         "format": "",
@@ -369,8 +387,23 @@
         },
     },
 
+    "bluetooth": {
+    "format": "  {status} ",
+    "format-connected": "  {device_alias} ",
+    "format-connected-battery": "  {device_alias}{device_battery_percentage}% ",
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+  },
+
+
+
     "tray": {
         "icon-size": 15,
         "spacing": 5
     }
+
+
+
 }
