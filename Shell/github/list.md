@@ -40,4 +40,13 @@ git@github.com:nutstore/obsidian-nutstore-sync.git
 
 nix-config
 git@github.com:ryan4yin/nix-config.git
+
+catppuccin/alacritty
+git@github.com:catppuccin/alacritty.git
+catppuccin/cosmic-desktop
+git@github.com:catppuccin/cosmic-desktop.git
+**catppuccin其他略**
+
+
+
  
