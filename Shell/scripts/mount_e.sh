@@ -3,7 +3,7 @@
 #https://jike.teracloud.jp/dav/
 #vdBZg7pLjtT3J9om
 
-mount -t ntfs-3g /dev/sda3 /mnt/data/
+mount -t ntfs-3g /dev/sda3 /mnt/ntfs/
 
 echo "ntfs-E mount successfully"
 
