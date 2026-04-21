@@ -1,6 +1,7 @@
 #!/bin/bash
 
-WALLPAPER_DIR="/home/angloong/Pictures/background/web"
+WALLPAPER_DIR="/home/angloong/Pictures/background/web260417"
+TRANSITION_DELAY=60
 
 function getdir() {
   for element in $(ls $1); do
@@ -17,6 +18,6 @@ while true; do
   WALLPAPER=$(getdir $WALLPAPER_DIR | shuf -n 1)
   echo "==>$WALLPAPER=="
   #awww img "$WALLPAPER_DIR/$WALLPAPER" --transition-type random
-  awww img "$WALLPAPER" --transition-type random
-  sleep 30 # s
+  awww img "$WALLPAPER" --transition-type random --resize fit
+  sleep $TRANSITION_DELAY # s
 done
