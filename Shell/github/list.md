@@ -47,6 +47,10 @@ catppuccin/cosmic-desktop
 git@github.com:catppuccin/cosmic-desktop.git
 **catppuccin其他略**
 
+鼠标主题
+https://gitlab.com/Pummelfisch/future-cyan-hyprcursor.git
 
-
+waybar主题：
+  mechabar 
+  git@github.com:sejjy/mechabar.git
  
