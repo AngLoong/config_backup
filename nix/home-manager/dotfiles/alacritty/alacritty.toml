@@ -7,7 +7,7 @@ import = [
     #"~/Shell/github/alacritty_themes/themes/seashells.toml"
     #"~/Shell/github/alacritty_themes/themes/solarized_light.toml"
     #"~/Shell/github/alacritty_themes/themes/solarized_osaka.toml"
-    ]
+]
 
 working_directory = "None"
 
@@ -111,7 +111,7 @@ style = "Underline"
 TERM = "xterm-256color"
 
 [font]
-size = 20.0
+size = 22.0
 
 normal = { family = "JetBrainsMono Nerd Font" , style = "Regular" }
 bold = { family = "JetBrainsMono Nerd Font" }

@@ -1,46 +1,51 @@
-* {
-    font-family: "Hack", monospace;
-}
-
 window {
-    background-color: #007d6f; /* cachydgreen */
+margin: 0px;
+border: 1px solid #bd93f9;
+background-color: #282a36;
 }
 
 #input {
-    margin: 5px;
-    border-radius: 0px;
-    border: none;
-    background-color: #111826; /* cachydgreen */
-    color: #ffffffff; /* cachywhite */
+margin: 5px;
+border: none;
+color: #f8f8f2;
+background-color: #44475a;
 }
 
 #inner-box {
-    background-color: #111826; /* cachydblue */
+margin: 5px;
+border: none;
+background-color: #282a36;
 }
 
 #outer-box {
-    margin: 2px;
-    padding: 10px;
-    background-color: #111826; /* cachydblue */
+margin: 5px;
+border: none;
+background-color: #282a36;
 }
 
 #scroll {
-    margin: 5px;
+margin: 0px;
+border: none;
 }
 
 #text {
-    padding: 4px;
-    color: #ffffffff; /* cachywhite */
+margin: 5px;
+border: none;
+color: #f8f8f2;
+} 
+
+#entry.activatable #text {
+color: #282a36;
 }
 
-#entry:nth-child(even){
-    background-color: #182545; /* cachymblue */
+#entry > * {
+color: #f8f8f2;
 }
 
 #entry:selected {
-    background-color: #00aa84; /* cachymgreen */
+background-color: #44475a;
 }
 
-#text:selected {
-    background: transparent;
+#entry:selected #text {
+font-weight: bold;
 }

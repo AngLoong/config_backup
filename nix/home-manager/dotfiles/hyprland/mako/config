@@ -1,9 +1,12 @@
-# Colors
-
-background-color=#eff1f5
-text-color=#4c4f69
-border-color=#dd7878
-progress-color=over #ccd0da
-
-[urgency=high]
-border-color=#fe640b
+max-visible=10
+layer=top
+font=Sarasa UI SC 10
+background-color=#4c566add
+text-color=#d8dee9
+border-color=#434c5e
+border-radius=7
+max-icon-size=48
+default-timeout=10000
+anchor=top-right
+margin=20
+include=~/.config/mako/themes/catppuccin-latte/catppuccin-latte-pink

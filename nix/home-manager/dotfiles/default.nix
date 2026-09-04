@@ -23,14 +23,19 @@
     #".config/alacritty/themes/tokyo-night-storm.toml".source = alacritty/themes/tokyo-night-storm.toml;
 
     ## <!--hyprland-->
-    ".config/hypr".source = hyprland/hypr;
+    #".config/hypr".source = hyprland/hypr;
     ".config/mako".source = hyprland/mako;
-    ".config/waybar".source = hyprland/waybar;
+    #".config/waybar".source = hyprland/waybar;
+    ".config/waybar".source = hyprland/waybar-mechabar;
     ".config/wofi".source = hyprland/wofi;
     ".config/wlogout".source = hyprland/wlogout;
 
     ## <!--ghostty-->
     ".config/ghostty".source = ./ghostty;
+
+    ## <!--fish-->
+    ".config/fish/conf.d/fzf.fish".source = fzf/fzf.fish;
+    ".config/fish/conf.d/zoxide.fish".source = zoxide/zoxide.fish;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''

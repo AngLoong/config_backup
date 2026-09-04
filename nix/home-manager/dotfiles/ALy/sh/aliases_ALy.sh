@@ -16,9 +16,15 @@ alias gga='git add *'
 alias ggo='git log'
 
 ##<!--feh-->
-alias fehf='feh -FZ'
+#alias fehf='feh -FZ'
 
 ##<!--nvim-->
 alias nv='nvim'
+
+##<!--fzf-->
+alias fzfm='fzf -m'
+
+##<!--lazygit-->
+alias lg='lazygit'
 
 #export TMP_C=aliase_end

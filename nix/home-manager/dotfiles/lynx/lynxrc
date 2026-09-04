@@ -1,0 +1,7 @@
+# 设置默认编码为 UTF-8
+CHARACTER_SET:utf-8
+# 支持的编码列表（按优先级排序）
+PREFERRED_LANGUAGES:zh-CN,en-US,en
+
+# 仅会话 Cookie（关闭后不保存）
+ACCEPT_COOKIES:session-only

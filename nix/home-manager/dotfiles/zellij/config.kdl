@@ -1,0 +1,17 @@
+
+simplified_ui false // false(default) ：with arrow font
+
+//default_shell "nu"
+
+theme "catppuccin-macchiato"
+
+default_layout "normal"
+
+//layout_dir "./layouts/"
+
+//theme_dir "./themes/"
+
+show_release_notes false
+
+show_startup_tips false
+

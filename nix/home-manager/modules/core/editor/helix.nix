@@ -15,6 +15,11 @@
         insert = "bar";
         select = "underline";
       };
+      editor.soft-wrap = {
+        enable = true;         # 开启软换行
+        wrap-at-text-width = true;  # 将软换行点设置在文本宽度（text-width）处
+        #text-width = 100;  # 设置文本宽度阈值
+      };
     };
 #
     languages.language = [

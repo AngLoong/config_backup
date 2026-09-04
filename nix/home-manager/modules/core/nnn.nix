@@ -8,8 +8,8 @@
   home.file = {
     ##<!--nnn-->##
 	  #".config/nnn/plugins/".source = dotfiles/nnn/plugins/.;
-	  #fish quit on cd
-	  #".config/fish/functions/n.fish".source = dotfiles/nnn/n.fish;
+    #fish quit on cd
+	  ".config/fish/functions/n.fish".source = ../../dotfiles/nnn/n.fish;
   };
 
   home.sessionVariables = {

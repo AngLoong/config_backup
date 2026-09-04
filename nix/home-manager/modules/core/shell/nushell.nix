@@ -5,7 +5,16 @@
   programs.nushell = {
     enable = true;
     configFile.source = ../../../dotfiles/nushell/config.nu;
+    shellAliases = {
+      vi = "hx";
+    }; 
   };
+
+#  home.file = {
+#	  ".config/nushell".source = ./../../../dotfiles/nushell;
+#	  ".config/nushell".recursive = true;
+#
+#  };
     
 }
 

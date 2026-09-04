@@ -179,12 +179,13 @@ source /home/angloong/.config/home-manager/dotfiles/nushell/themes/catppuccin_mo
 ## <!--aliase-->
 source /home/angloong/.config/home-manager/dotfiles/nushell/aliases.nu
 
-## <!--yazi-->
-source /home/angloong/.config/home-manager/dotfiles/nushell/y.nu
+## <!--yazi-->相关配置已经设置了，此处会造成多重定义的错误。
+#source /home/angloong/.config/home-manager/dotfiles/nushell/y.nu
 
 ## <!--nnn-->
 source /home/angloong/.config/home-manager/dotfiles/nushell/n.nu
 
+## <!--zoxide-->
+#source /home/angloong/.config/home-manager/dotfiles/nushell/zoxide.nu
 
-
-
+####<!--可以通过查看./config/nushell/config.nu 的链接文件查看配置中所有生效的设置-->
