@@ -1,6 +1,6 @@
 #!/bin/bash
 
-WALLPAPER_DIR="/home/angloong/Pictures/background/web260417"
+WALLPAPER_DIR="/home/angloong/Pictures/background/web"
 TRANSITION_DELAY=60
 
 function getdir() {
@@ -16,7 +16,7 @@ function getdir() {
 
 while true; do
   WALLPAPER=$(getdir $WALLPAPER_DIR | shuf -n 1)
-  echo "==>$WALLPAPER=="
+  #echo "==>$WALLPAPER=="
   #awww img "$WALLPAPER_DIR/$WALLPAPER" --transition-type random
   awww img "$WALLPAPER" --transition-type random --resize fit
   sleep $TRANSITION_DELAY # s
